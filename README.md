@@ -23,23 +23,25 @@ Windowsの場合、zip形式のファイルをDLする。
      ├include  
      ├jre  
      └lib  
-
+  
   
 ・Ant インストール  
 AntのZipファイルを解凍し、JDKインストールディレクトリにコピーします。  
 すると、以下のDir構成となります。  
-C:\jdk1.6.0_05  
- ├bin  
- ├db  
- ├demo  
- ├include  
- ├jre  
- ├lib  
- └apache-ant-1.7.0     <= ANT_HOME  
-    ├bin  
-    ├docs  
-    ├etc  
-    └lib  
+
+    C:\jdk1.6.0_05  
+     ├bin  
+     ├db  
+     ├demo  
+     ├include  
+     ├jre  
+     ├lib  
+     └apache-ant-1.7.0     <= ANT_HOME  
+        ├bin  
+        ├docs  
+        ├etc  
+        └lib  
+
   
   
 ・Antプロジェクト(ここ一式)の設定  
