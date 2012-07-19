@@ -6,24 +6,23 @@ Ant 実行環境サンプル
   runAnt.bat      <= Ant実行バッチ  
   
   
-JDKのインストールは済んでいるものとします。
-コマンドプロンプトで、javac のみで実行すると、何か実行される状態。
+JDKのインストールは済んでいるものとします。  
+コマンドプロンプトで、javac のみで実行すると、何か実行される状態。  
+  
+Antのありか  
+  http://ant.apache.org/bindownload.cgi  
+    Windowsの場合、zip形式のファイルをDLする。  
 
-Antのありか
-  http://ant.apache.org/bindownload.cgi
-    Windowsの場合、zip形式のファイルをDLする。
-    2008年4月現在、apache-ant-1.7.0-bin.zip が最新。
-
-この例では、JDKを C: 直下の C:\jdk1.6.0_05 にインストールしています。
-以下のようなDir構成となっているはずです。
-C:\jdk1.6.0_05              <= JAVA_HOME
- ├bin
- ├db
- ├demo
- ├include
- ├jre
- └lib
-
+この例では、JDKを C: 直下の C:\jdk1.6.0_05 にインストールしています。  
+以下のようなDir構成となっているはずです。  
+C:\jdk1.6.0_05              <= JAVA_HOME  
+ ├bin  
+ ├db  
+ ├demo  
+ ├include  
+ ├jre  
+ └lib  
+  
 ・Ant インストール
     AntのZipファイルを解凍し、JDKインストールディレクトリにコピーします。
     すると、以下のDir構成となります。
@@ -81,7 +80,7 @@ C:\jdk1.6.0_05              <= JAVA_HOME
     ・clean         ：以前作成したクラスファイルを削除
     ・javadoc       ：JavaDoc作成。docsに出力。
     ・CreateProject ：プロジェクトのディレクトリ構成を作成。
-g
+
 
 以上
 
