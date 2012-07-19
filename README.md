@@ -15,15 +15,14 @@ Windowsの場合、zip形式のファイルをDLする。
 
 この例では、JDKを C: 直下の C:\jdk1.6.0_05 にインストールしています。  
 以下のようなDir構成となっているはずです。  
-``
-C:\jdk1.6.0_05              <= JAVA_HOME  
- ├bin  
- ├db  
- ├demo  
- ├include  
- ├jre  
- └lib  
-``
+    C:\jdk1.6.0_05              <= JAVA_HOME  
+     ├bin  
+     ├db  
+     ├demo  
+     ├include  
+     ├jre  
+     └lib  
+
   
 ・Ant インストール  
 AntのZipファイルを解凍し、JDKインストールディレクトリにコピーします。  
