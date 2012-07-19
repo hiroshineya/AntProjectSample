@@ -81,7 +81,7 @@ C:\jdk1.6.0_05              <= JAVA_HOME
     ・clean         ：以前作成したクラスファイルを削除
     ・javadoc       ：JavaDoc作成。docsに出力。
     ・CreateProject ：プロジェクトのディレクトリ構成を作成。
-
+g
 
 以上
 
