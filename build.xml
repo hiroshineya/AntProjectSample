@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="JavaProject" default="compile"  basedir=".">
+
+  <!-- ****プロパティ**** -->
+  <!--  -->
+  <property name="encoding" value="UTF-8"/>
+  <!-- ソースファイルがあるディレクトリ -->
+  <property name="src.dir" value="./src"/>
+  <!-- クラスファイルを出力するディレクトリ -->
+  <property name="classes.dir" value="./classes"/>
+  <!-- ライブラリ格納ディレクトリ -->
+  <property name="lib.dir" value="./lib"/>
+  <!-- javadocを出力するディレクトリ -->
+  <property name="javadoc.dir" value="./docs"/>
+  <!-- jarファイル名 -->
+  <property name="jar.name" value="dummy.jar"/>
+
+
+  <!-- ****ターゲット**** -->
+  <!-- コンパイル -->
+  <target name="compile">
+    <mkdir dir="${classes.dir}" />
+    <javac srcdir="${src.dir}" destdir="${classes.dir}" encoding="${encoding}" deprecation="on" optimize="on" debug="on" includeAntRuntime="no">
+        <classpath>
+            <fileset dir="lib">
+                <include name="**/*.jar"/>
+            </fileset>
+        </classpath>
+    </javac>
+  </target>
+
+  <target name="cleanCompile" depends="clean, compile" />
+
+
+  <!-- jarファイルの作成 -->
+  <target name="jar" depends="cleanCompile">
+    <jar jarfile="${jar.name}" basedir="${classes.dir}"></jar>
+  </target>
+
+  <target name="clean">
+    <delete dir="${classes.dir}" />
+    <delete file="${jar.name}" />
+  </target>
+
+  <!-- javadocの作成 -->
+  <target name="javadoc">
+    <javadoc destdir="${javadoc.dir}">
+      <fileset dir="${src.dir}"/>
+    </javadoc>
+  </target>
+ 
+  <!-- 生成したファイルやフォルダの削除 -->
+  <target name="cleanAll">
+    <delete dir="${classes.dir}" />
+    <delete dir="${javadoc.dir}" />
+    <delete file="${jar.name}" />
+  </target>
+  <!-- Projectディレクトリ構成作成 -->
+  <target name="CreateProject" depends="clean">
+    <mkdir dir="${classes.dir}" />
+    <mkdir dir="${src.dir}" />
+    <mkdir dir="${lib.dir}" />
+    <mkdir dir="${javadoc.dir}" />
+  </target>
+
+</project>
+
